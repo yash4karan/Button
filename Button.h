@@ -5,8 +5,8 @@
 
 class Button {
   private:
-    byte _pin;  // pin number of button
-    unsigned int _dt = 10; // debounce time (configurable)
+    const byte _pin;  // pin number of button
+    byte _dt = 10; // debounce time (configurable)
     unsigned long _tbp = 0; // start time of the button being pressed
     bool _apt = 0; // awaiting press time. Start waiting for long press, but only while the button is pressed.
     bool _t = 0; // has the button been toggled already? Prevents repeated toggles when button remains pressed for longer.
@@ -15,7 +15,7 @@ class Button {
 
   public:
     // constructor
-    Button(byte pin, bool def, unsigned int dt);
+    Button(byte pin, bool def, byte dt);
     Button(byte pin, bool def);
     Button(byte pin);
 
@@ -28,7 +28,7 @@ class Button {
     // function that returns true when long-pressed. If the button is kept pressed, no not continually switch states.
     bool IsLongPressed(unsigned long lpt);
 
-    // implement a 'held down' function with debounce?
+    // implement a 'held down' function with debounce? Or is the Status() function good enough? It seems to be!
     // bool HeldDown();
 };
 

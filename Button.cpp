@@ -1,20 +1,20 @@
 #include "Arduino.h"
 #include "Button.h"
 
-Button::Button(byte pin, bool def, unsigned int dt) {
+Button::Button(const byte pin, const bool def, const byte dt) {
     _pin = pin;
     _def = def;
     _dt = dt;
     pinMode(pin, INPUT);
 }
 
-Button::Button(byte pin, bool def) {
+Button::Button(const byte pin, const bool def) {
     _pin = pin;
     _def = def;
     pinMode(pin, INPUT);
 }
 
-Button::Button(byte pin) {
+Button::Button(const byte pin) {
     _pin = pin;
     pinMode(pin, INPUT);
 }
