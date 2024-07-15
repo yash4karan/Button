@@ -1,7 +1,7 @@
 README.md
 
 This is a library to enable plug-and-play interaction with buttons on the Arduino platform. This library supports multi-touch.
-Types of button presses accommodation:
+Types of button presses accommodated:
  1. Toggles,
  2. Long-press toggles, and 
  3. Hold-downs.
